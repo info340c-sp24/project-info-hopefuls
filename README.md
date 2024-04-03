@@ -4,3 +4,4 @@ This repository contains code for an interactive information web app, created fo
 
 Jesiah Guadiz-Macadangdang
 Rahul Iyer
+Sofila Song
