@@ -4,3 +4,15 @@ header h2 {
     font-style: italic;
     font-weight: normal;
 }
+
+body {
+    background-color: antiquewhite;
+}
+
+p {
+    font-size: 25px;
+}
+
+a {
+    color: rgb(31, 158, 33);
+}
