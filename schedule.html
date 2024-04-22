@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Workout</title>
+    <link href="css/create.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html">Home</a>
+                <a href="create_page.html">Create</a>
+                <a href="#">Search</a>
+            </div>
+        </nav> 
+        <div class="container">
+            <h1>Schedule Workout</h1>
+        </div>
+    </header>
+    <div class="container">
+        <form>
+            <div class="card">
+                <h2>Schedule Workout</h2>
+                <label for="workout_select">Select Workout: </label>
+                <select class="form-select" id="workout_select">
+                    <option selected>Choose</option>
+                    <option value="1">Saved wokrouts</option>
+                    <option value="2">Others</option>
+                </select>
+                <label for="schedule_date">Date: </label>
+                <input type="date" id="schedule_date">
+                <label for="schedule_time">Time: </label>
+                <input type="time" id="schedule_time">
+            </div>
+            <div class="card">
+                <a href="#" class="button">Schedule</a>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Workout Planner. All rights reserved. INFO hopefules</p>
+    </footer>
+</body>
+</html>
