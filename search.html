@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search for Workouts</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="create_workout.html">Create Workout</a>
+            <a href="plan.html">Plan</a>
+            <a href="search.html">Search</a>
+        </nav> 
+        <div class="container">
+            <h1>Search Workouts</h1>
+        </div>
+    </header>
+    <div class="container">
+        <form>
+            <div class="card">
+                <h2>Find a Workout</h2>
+                <label for="goal_input">Your Goal:</label>
+                <select id="goal_input" class="form-select">
+                    <option selected>Choose...</option>
+                    <option value="weight_loss">Weight Loss</option>
+                    <option value="muscle_gain">Muscle Gain</option>
+                    <option value="flexibility">Flexibility</option>
+                    <option value="endurance">Endurance</option>
+                </select>
+                <label for="intensity_input">Intensity Level:</label>
+                <select id="intensity_input" class="form-select">
+                    <option selected>Choose...</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+                <button type="submit" class="button">Search</button>
+            </div>
+        </form>
+        <div class="card">
+            <h2>Suggested Workouts</h2>
+            <ul id="workout_list">
+                <!-- Workout items will be dynamically inserted here -->
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Workout Planner. All rights reserved. INFO hopefuls</p>
+    </footer>
+</body>
+</html>
