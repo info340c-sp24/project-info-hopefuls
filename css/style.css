@@ -84,3 +84,18 @@ a.button:hover {
     object-fit: cover; 
     border-radius: 10px; 
 }
+
+section {
+    margin: .5rem 0;
+    padding: .5rem;
+    border: 1px solid rgb(137, 207, 240);
+  }
+
+   .navbar a{
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-top: 40px;
+ 
+  }
