@@ -141,3 +141,28 @@ section {
 .button:hover {
     background-color: #8e8e8e;
 }
+
+/* Updated CSS for the nav bar */
+.navbar {
+    color: white;
+    padding: 10px 0; /* Added padding to the top and bottom */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: flex-end; /* Align links to the right */
+}
+
+.navbar a {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 10px; /* Add spacing between links */
+    transition: background-color 0.3s; /* Smooth transition effect */
+}
+
+.navbar a:hover {
+    background-color: #8e8e8e; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
