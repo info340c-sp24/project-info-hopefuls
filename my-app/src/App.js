@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
+import CreateWo from './createwo'; // Importing CreateWo correctly
 
-import createwo from './createwo'
 const App = () => {
   return (
-    <><div>App</div>
-    <createwo> </createwo></>
-  )
+    <>
+      <div>App</div>
+      <CreateWo /> 
+    </>
+  );
 }
 
-export default App
+export default App;
