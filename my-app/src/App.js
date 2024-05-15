@@ -1,11 +1,14 @@
 import React from 'react';
-import CreateWo from './createwo'; // Importing CreateWo correctly
+import Header from './Header';
+import Container from './Container';
+import Footer from './Footer';
 
-const App = () => {
+function App() {
   return (
     <>
-      <div>App</div>
-      <CreateWo /> 
+      <Header />
+      <Container />
+      <Footer />
     </>
   );
 }
