@@ -1,9 +1,20 @@
 import React from 'react'
+import CwHeader from './CwHeader';
+import CwIndividualWorkout from './CwIndividualWorkout';
+import CwSearchWorkouts from './CwSearchWorkouts';
+import CwBuildingWorkout from './CwBuildingWorkout';
+import Footer from './Footer';
 
-const createwo = () => {
+const Createwo = () => {
   return (
-    <div>workout</div>
+      <div>
+        <CwHeader />
+        <CwIndividualWorkout />
+        <CwSearchWorkouts />
+        <CwBuildingWorkout />
+        <Footer />
+        </div>
   )
 }
 
-export default createwo
+export default Createwo
