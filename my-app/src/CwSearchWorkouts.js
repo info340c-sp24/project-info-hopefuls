@@ -2,8 +2,9 @@ import React from 'react';
 
 function CwSearchWorkouts(){
     return(
-        <div className='card'>
-          <h2>Search My Workouts:</h2>
+        <div className='container'>
+            <div className='card'>
+               <h2>Search My Workouts:</h2>
                         <label class="saved_workouts" for="saved_workout_select">My Workouts: </label>
                         <select class="form-select" id="saved_workout_select">
                             <option selected>Choose</option>
@@ -27,7 +28,9 @@ function CwSearchWorkouts(){
                             <option value="6">Back</option>
                         </select>  
                         <h3>Results</h3>
-                        <img src="img\results.jpg" alt="Results of Filter"></img>
+                        <img src="img\results.jpg" alt="Results of Filter"></img> 
+            </div>
+          
         </div>
     )
 }
