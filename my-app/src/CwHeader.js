@@ -7,6 +7,9 @@ function CwHeader() {
     const navigateToSign = () => {
         navigate('/signin');
     }
+    const navigateToHome = () => {
+        navigate('/');
+    }
     const navigateToSearch = () => {
         navigate('/search.html');
     }
@@ -20,6 +23,7 @@ function CwHeader() {
         <div className="navbar">
           {/* <a href="sign" className="button">Sign Up</a> */}
             <button onClick= {navigateToSign}>Sign In</button>
+            <button onClick= {navigateToHome}>Home</button>
             <button onCLick = {navigateToSearch}>Search</button>
             <button onCLick = {navigateToSchedule}>Schedule</button>
         </div>
