@@ -14,7 +14,7 @@ function SearchWorkouts() {
   };
 
   const navigateToSchedule = () => {
-    navigate('/schedule.html');
+    navigate('/schedule');
   };
 
   return (
@@ -22,9 +22,9 @@ function SearchWorkouts() {
       <header>
         <nav className="navbar">
           <div className="container">
-            <a href="#" onClick={navigateToHome}>Home</a>
-            <a href="#" onClick={navigateToCreate}>Create</a>
-            <a href="#" onClick={navigateToSchedule}>Schedule</a>
+            <a href="/" onClick={navigateToHome}>Home</a>
+            <a href="/Create_page.html" onClick={navigateToCreate}>Create</a>
+            <a href="/schedule" onClick={navigateToSchedule}>Schedule</a>
           </div>
         </nav>
         <div className="container">

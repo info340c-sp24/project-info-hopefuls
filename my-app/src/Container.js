@@ -1,7 +1,7 @@
 // Container.js
 import React from 'react';
 import Card from './Card';
-import Schedule from './schdeule';
+import Schedule from './schedule';
 
 function Container() {
   const cardsData = [
@@ -24,7 +24,7 @@ function Container() {
       imgAlt: "Schedule Workout",
       title: "Schedule Workouts",
       description: "Plan your workout sessions and see progress.",
-      link: <Schedule/>
+      link: "schedule"
     }
   ];
 

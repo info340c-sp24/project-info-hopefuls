@@ -5,6 +5,7 @@ import Signin from './Signin';
 import Landing from './Landing';
 import Createwo from './createwo';
 import SearchWorkouts from './search';
+import Schedule from './schedule';
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path = "/signin" element={<Signin></Signin>}></Route>
         <Route path = "/Create_page.html" element={<Createwo></Createwo>}></Route>
         <Route path = "/search.html" element={<SearchWorkouts />}></Route>
+        <Route path = "/schedule" element={<Schedule />}></Route>
       </Routes>
     </Router>
   );

@@ -4,30 +4,31 @@ import { useNavigate } from 'react-router-dom';
 function CwHeader() {
     const navigate = useNavigate();
 
-    const navigateToSign = () => {
-        navigate('/signin');
-    }
     const navigateToHome = () => {
-        navigate('/');
-    }
+      navigate("/");
+    };
+
     const navigateToSearch = () => {
-        navigate('/search.html');
-    }
+      navigate("/search.html");
+    };
+
     const navigateToSchedule = () => {
-        navigate('/schedule.html');
-    }
+      navigate("/schedule");
+    };
 
     return (
       <header>
-        <h1>Create Workout</h1>
-        <div className="navbar">
-          {/* <a href="sign" className="button">Sign Up</a> */}
-            <button onClick= {navigateToSign}>Sign In</button>
-            <button onClick= {navigateToHome}>Home</button>
-            <button onCLick = {navigateToSearch}>Search</button>
-            <button onCLick = {navigateToSchedule}>Schedule</button>
+      <nav className="navbar">
+        <div className="container">
+          <a href="/" onClick={navigateToHome}>Home</a>
+          <a href="/search.html" onClick={navigateToSearch}>Search</a>
+          <a href="/schedule" onClick={navigateToSchedule}>Schedule</a>
         </div>
-      </header>
+      </nav>
+      <div className="container">
+        <h1>Create Workout</h1>
+      </div>
+    </header>
     );
   }
 
