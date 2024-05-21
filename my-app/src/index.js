@@ -10,12 +10,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBzDMumyjnFGH_DfKkZpX7rDr79M-GbMjc",
-  authDomain: "workout-planner-906bf.firebaseapp.com",
-  projectId: "workout-planner-906bf",
-  storageBucket: "workout-planner-906bf.appspot.com",
-  messagingSenderId: "765784666816",
-  appId: "1:765784666816:web:2bd72ab0c7218cd7f77325"
+  apiKey: "AIzaSyAwoiSXxv-P5D9yHwRvcPg4KquYCag-0b4",
+  authDomain: "workoutplanner-887e9.firebaseapp.com",
+  projectId: "workoutplanner-887e9",
+  storageBucket: "workoutplanner-887e9.appspot.com",
+  messagingSenderId: "195824445846",
+  appId: "1:195824445846:web:fc1430441515f4fa2dd5b7"
 };
 
 // Initialize Firebase
