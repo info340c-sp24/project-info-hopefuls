@@ -50,7 +50,7 @@ const Createwo = () => {
       (catagory === "" || workout.goal === catagory) && 
       (workoutName === "" || workout.name === workoutName)
     );
-    setFilteredWorkouts(results);
+    setNewWorkout(...newWorkout, results);
   };
 
   return (
