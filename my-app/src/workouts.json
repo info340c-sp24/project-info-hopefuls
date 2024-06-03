@@ -1,0 +1,209 @@
+[
+
+  {
+    "name": "Push-Ups",
+    "goal": "muscle_gain",
+    "intensity": "beginner"
+  },
+  {
+    "name": "Bicep Curls",
+    "goal": "muscle_gain",
+    "intensity": "beginner"
+  },
+
+  {
+    "name": "Bench Press",
+    "goal": "muscle_gain",
+    "intensity": "intermediate"
+  },
+  {
+    "name": "Dumbbell Flyes",
+    "goal": "muscle_gain",
+    "intensity": "intermediate"
+  },
+
+  {
+    "name": "Sumo Squats",
+    "goal": "muscle_gain",
+    "intensity": "advanced"
+  },
+  {
+    "name": "Deadlifts",
+    "goal": "muscle_gain",
+    "intensity": "advanced"
+  },
+  {
+    "name": "Pull-Ups",
+    "goal": "muscle_gain",
+    "intensity": "advanced"
+  },
+
+  {
+    "name": "Lunges",
+    "goal": "strength",
+    "intensity": "beginner"
+  },
+
+  {
+    "name": "Leg-Press",
+    "goal": "strength",
+    "intensity": "intermediate"
+  },
+  {
+    "name": "Kettlebell Swings",
+    "goal": "strength",
+    "intensity": "intermediate"
+  },
+  {
+    "name": "TRX Rows",
+    "goal": "strength",
+    "intensity": "intermediate"
+  },
+  {
+    "name": "Squats",
+    "goal": "strength",
+    "intensity": "intermediate"
+  },
+  {
+    "name": "Wall Sits",
+    "goal": "strength",
+    "intensity": "intermediate"
+  },
+  {
+    "name": "Jump Squats",
+    "goal": "strength",
+    "intensity": "intermediate"
+  },
+
+  {
+    "name": "Powerlifting",
+    "goal": "strength",
+    "intensity": "advanced"
+  },
+
+  {
+    "name": "Running",
+    "goal": "weight_loss",
+    "intensity": "beginner"
+  },
+  {
+    "name": "Elliptical",
+    "goal": "weight_loss",
+    "intensity": "beginner"
+  },
+
+  {
+    "name": "Mountain Climbers",
+    "goal": "weight_loss",
+    "intensity": "intermediate"
+  },
+
+  {
+    "name": "Sprint Intervals",
+    "goal": "weight_loss",
+    "intensity": "advanced"
+  },
+  {
+    "name": "Burpees",
+    "goal": "weight_loss",
+    "intensity": "advanced"
+  },
+  {
+    "name": "Boxing",
+    "goal": "weight_loss",
+    "intensity": "advanced"
+  },
+  {
+    "name": "High-Intensity Interval Training (HIIT)",
+    "goal": "weight_loss",
+    "intensity": "advanced"
+  },
+
+  {
+    "name": "Yoga",
+    "goal": "flexibility",
+    "intensity": "beginner"
+  },
+  {
+    "name": "Pilates",
+    "goal": "flexibility",
+    "intensity": "intermediate"
+  },
+  {
+    "name": "Stretching",
+    "goal": "flexibility",
+    "intensity": "beginner"
+  },
+
+  {
+    "name": "Jump Rope",
+    "goal": "endurance",
+    "intensity": "beginner"
+  },
+  {
+    "name": "Hiking",
+    "goal": "endurance",
+    "intensity": "beginner"
+  },
+
+  {
+    "name": "Cycling",
+    "goal": "endurance",
+    "intensity": "intermediate"
+  },
+  {
+    "name": "Swimming",
+    "goal": "endurance",
+    "intensity": "intermediate"
+  },
+
+  {
+    "name": "Battle Ropes",
+    "goal": "endurance",
+    "intensity": "advanced"
+  },
+  {
+    "name": "Stair Climbing",
+    "goal": "endurance",
+    "intensity": "advanced"
+  },
+
+  {
+    "name": "Plank",
+    "goal": "core_strength",
+    "intensity": "beginner"
+  },
+  {
+    "name": "Sit-Ups",
+    "goal": "core_strength",
+    "intensity": "beginner"
+  },
+ 
+  {
+    "name": "Russian Twists",
+    "goal": "core_strength",
+    "intensity": "intermediate"
+  },
+  {
+    "name": "Side Planks",
+    "goal": "core_strength",
+    "intensity": "intermediate"
+  },
+
+  {
+    "name": "Rowing Machine",
+    "goal": "cardio",
+    "intensity": "beginner"
+  },
+  {
+    "name": "Treadmill Jogging",
+    "goal": "cardio",
+    "intensity": "beginner"
+  },
+
+  {
+    "name": "Rowing",
+    "goal": "cardio",
+    "intensity": "intermediate"
+  }
+]

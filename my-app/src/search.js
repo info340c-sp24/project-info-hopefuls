@@ -1,20 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Footer from "./Footer";
+import workouts from "./workouts.json"; 
 
 function SearchWorkouts() {
+  const [goal, setGoal] = useState("");
+  const [intensity, setIntensity] = useState("");
+  const [filteredWorkouts, setFilteredWorkouts] = useState([]);
+
   const navigate = useNavigate();
-  
 
   const navigateToHome = () => {
     navigate("/");
   };
-  
+
   const navigateToCreate = () => {
     navigate('/Create_page.html');
   };
 
   const navigateToSchedule = () => {
     navigate('/schedule');
+  };
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    const results = workouts.filter(workout => 
+      (goal === "" || workout.goal === goal) && 
+      (intensity === "" || workout.intensity === intensity)
+    );
+    setFilteredWorkouts(results);
   };
 
   return (
@@ -27,25 +41,38 @@ function SearchWorkouts() {
             <a href="/schedule" onClick={navigateToSchedule}>Schedule</a>
           </div>
         </nav>
+        {/* the search workout card */}
         <div className="container">
           <h1>Search Workouts</h1>
         </div>
       </header>
       <div className="container">
-        <form>
+        <form onSubmit={handleSearch}>
           <div className="card">
             <h2>Find a Workout</h2>
             <label htmlFor="goal_input">Your Goal:</label>
-            <select id="goal_input" className="form-select">
-              <option selected>Choose...</option>
+            <select 
+              id="goal_input" 
+              className="form-select" 
+              value={goal} 
+              onChange={(e) => setGoal(e.target.value)}
+            >
+              <option value="">Choose...</option>
               <option value="weight_loss">Weight Loss</option>
               <option value="muscle_gain">Muscle Gain</option>
               <option value="flexibility">Flexibility</option>
               <option value="endurance">Endurance</option>
             </select>
+
+            {/* Intensity */}
             <label htmlFor="intensity_input">Intensity Level:</label>
-            <select id="intensity_input" className="form-select">
-              <option selected>Choose...</option>
+            <select 
+              id="intensity_input" 
+              className="form-select" 
+              value={intensity} 
+              onChange={(e) => setIntensity(e.target.value)}
+            >
+              <option value="">Choose...</option>
               <option value="beginner">Beginner</option>
               <option value="intermediate">Intermediate</option>
               <option value="advanced">Advanced</option>
@@ -56,27 +83,16 @@ function SearchWorkouts() {
         <div className="card">
           <h2>Suggested Workouts</h2>
           <ul id="workout_list">
-            <li>
-              <h3>Push-Ups</h3>
-              <p>Goal: Muscle Gain</p>
-              <p>Intensity: Beginner</p>
-            </li>
-            <li>
-              <h3>Leg-Press</h3>
-              <p>Goal: Strength</p>
-              <p>Intensity: Intermediate</p>
-            </li>
-            <li>
-              <h3>Sumo Squats</h3>
-              <p>Goal: Muscle Gain</p>
-              <p>Intensity: Advanced</p>
-            </li>
+            {filteredWorkouts.map((workout, index) => (
+              <li key={index}>
+                <h3>{workout.name}</h3>
+                <p>Intensity: {workout.intensity}</p>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
-      <footer>
-        <p>&copy; 2024 Workout Planner. All rights reserved. INFO hopefuls</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
