@@ -13,7 +13,6 @@ const Createwo = () => {
   const [repsSets, setRepsSets] = useState('');
   const [description, setDiscription] = useState('');
   const [myWO, setmyWO] = useState('');
-  const [filteredWorkouts, setFilteredWorkouts] = useState([]);
   
   // workout list user is creating
   const [newWorkout, setNewWorkout] = useState([]);
