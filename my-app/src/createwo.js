@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './index.css';
+import workouts from "./workouts.json"; 
+import CwHeader from './CwHeader';
+import CwBuildingWorkout from './CwBuildingWorkout';
+import Footer from './Footer';
 
 const Createwo = () => {
   //creating new workout... or search?
@@ -12,13 +16,9 @@ const Createwo = () => {
 
   // workout list user is creating
   const [newWorkout, setNewWorkout] = useState([]);
-  const input = useRef();
+
 
   //add to list 
-  var addToList = e => {
-    e.preventDefault();
-    setNewWorkout([...newWorkout, input.current.value]);
-  };
 
   //save button
   const handleAddButtonClick = () => {
@@ -57,7 +57,7 @@ const Createwo = () => {
       <div>
         <CwHeader />
         <div className='container'>
-          <form onSubmit={addToList}>
+          <form onSubmit={handleAddButtonClick}>
             <div className='card'>
                <h2>Create Individual Workout</h2>
                         <label htmlFor="workout_title">Workout Name: </label>
@@ -65,7 +65,7 @@ const Createwo = () => {
                         id="workout_name"
                         placeholder ="squats"
                         value={workoutName}
-                        onChange={(e) => setWorkoutName(e.target.value)}></input>
+                        onChange={(e) => setWorkoutName(e.target.value)}> </input>
                         <label htmlFor="workout_cat_input">Catagory</label>
                         <select 
                         class="form-select" 
@@ -105,7 +105,22 @@ const Createwo = () => {
         <div className='container'>
           <form onSubmit={handleSearch}>
             <div className='card'>
-               <h2>Search My Workouts:</h2>
+               <h2>Search Workouts:</h2>
+                        
+                        <label htmlFor="workout_cat_input">Catagory</label>
+                        <select class="form-select"
+                        id="worout_cat_input"
+                        value={catagory}
+                        onChange={(e) => setCatagory(e.target.value)}>
+                            <option selected>Choose</option>
+                            <option value="1">strength</option>
+                            <option value="2">weight_loss</option>
+                            <option value="3">flexibility</option>
+                            <option value="4">endurance</option>
+                            <option value="5">core_strength</option>
+                            <option value="6">cardio</option>
+                        </select>  
+                        
                         <label htmlFor="saved_workout_select">My Workouts: </label>
                         <select class="form-select" 
                         id="saved_workout_select"
@@ -121,28 +136,16 @@ const Createwo = () => {
                             <option value="6">Arm Curls</option>
                             <option value="7">New...</option>
                         </select>
-                        <label htmlFor="workout_cat_input">Catagory</label>
-                        <select class="form-select"
-                        id="worout_cat_input"
-                        value={catagory}
-                        onChange={(e) => setCatagory(e.target.value)}>
-                            <option selected>Choose</option>
-                            <option value="1">Cardio</option>
-                            <option value="2">Arms</option>
-                            <option value="3">Legs</option>
-                            <option value="4">Glutes</option>
-                            <option value="5">Quads</option>
-                            <option value="6">Back</option>
-                        </select>  
+                  
                         <h3>Results</h3>
-                        <ul id="workout_list">
-                          {filteredWorkouts.map((workout, index) => (
-                            <li key={index}>
-                              <h3>{workout.name}</h3>
-                              <p>Catagory: {workout.goal}</p>
-                            </li>
+                        <select class="form-select"
+                         id="saved_workout_select"
+                         value={workoutName}
+                         onClick={() => handleAddButtonClick()}>
+                          {newWorkout.map((workout, index) => (
+                            <option value={index}>{workout.name}</option>
                           ))}
-                        </ul>
+                        </select>
             </div>
           </form>   
         </div>
