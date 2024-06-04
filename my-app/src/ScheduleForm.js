@@ -27,9 +27,6 @@ const ScheduleForm = ({ workout, setWorkout, date, setDate, time, setTime, handl
     setSubmitted(true);
     setScheduledDate(selectedDate); // Store the scheduled date
     setInvalidDate(false); // Reset invalid date state
-    setTimeout(() => {
-      navigate('/'); // Redirect to the home page
-    }, 2000); // Redirect after 2 seconds
   };
 
   return (
