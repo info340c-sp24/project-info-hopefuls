@@ -10,7 +10,7 @@ const Createwo = () => {
   const [catagory, setCatagory] = useState('');
   const [repsSets, setRepsSets] = useState('');
   const [description, setDiscription] = useState('');
-  const [newWorkout, setNewWorkout] = useState([]);
+  const [newWorkout, setNewWorkout] = useState([]); 
 
   const handleAddButtonClick = () => {
     const workout = {
