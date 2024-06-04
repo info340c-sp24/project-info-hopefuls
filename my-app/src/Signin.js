@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useUser } from './UserContext'; 
 
 const Signin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const { setUser } = useUser(); 
 
   const handleSubmit = (event) => {
-    event.preventDefault()
-    console.log('Email:', email, 'Password:', password);
-
+    event.preventDefault();
+    setUser({ email });
     navigate('/');
   };
 

@@ -1,26 +1,27 @@
+// App.js
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { UserProvider } from './UserContext';
 
-import ReactDOM from "react-dom";
 import Signin from './Signin';
 import Landing from './Landing';
 import Createwo from './createwo';
 import SearchWorkouts from './search';
 import Schedule from './schedule';
-import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
-
-
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path = "/" element={<Landing></Landing>}></Route>
-        <Route path = "/signin" element={<Signin></Signin>}></Route>
-        <Route path = "/Create_page.html" element={<Createwo></Createwo>}></Route>
-        <Route path = "/search.html" element={<SearchWorkouts />}></Route>
-        <Route path = "/schedule" element={<Schedule />}></Route>
-      </Routes>
-    </Router>
+    <UserProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/Create_page.html" element={<Createwo />} />
+          <Route path="/search.html" element={<SearchWorkouts />} />
+          <Route path="/schedule" element={<Schedule />} />
+        </Routes>
+      </Router>
+    </UserProvider>
   );
 }
 
