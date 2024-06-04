@@ -10,7 +10,7 @@ function Container() {
       imgAlt: "Create Workout",
       title: "Create Workout",
       description: "Create your own personalized workout.",
-      link: "Create_page.html"
+      link: "Createwo"
     },
     {
       imgSrc: "/img/search.jpeg",
