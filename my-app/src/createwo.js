@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './index.css';
+<<<<<<< HEAD
 import workouts from "./workouts.json"; 
+=======
+import CwBuildingWorkout from './CwBuildingWorkout';
+>>>>>>> f394f78e818f09fb21365b6c5b2b57a2a0b4010e
 import CwHeader from './CwHeader';
 import Footer from './Footer';
+import workouts from "./workouts.json"; 
 
 const Createwo = () => {
   //creating new workout... or search?
@@ -12,10 +17,14 @@ const Createwo = () => {
   const [repsSets, setRepsSets] = useState('');
   const [description, setDiscription] = useState('');
   const [myWO, setmyWO] = useState('');
+<<<<<<< HEAD
 
   //filtered list for searching display
   const [filteredWorkouts, setFilteredWorkouts] = useState([]);
 
+=======
+  
+>>>>>>> f394f78e818f09fb21365b6c5b2b57a2a0b4010e
   // workout list user is creating
   const [newWorkout, setNewWorkout] = useState([]);
 
