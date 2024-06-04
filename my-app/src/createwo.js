@@ -165,7 +165,7 @@ const Createwo = () => {
         </div>
         <Footer />
       </div>
-  )
+  );
 }
 
 export default Createwo;
