@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import DateInput from './DateInput';
 import TimeInput from './TimeInput';
 import SubmitButton from './SubmitButton';
@@ -10,12 +9,10 @@ const ScheduleForm = ({ handleSubmit }) => {
   const [time, setTime] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [invalidDate, setInvalidDate] = useState(false);
-  const [formChanged, setFormChanged] = useState(false);
   const [scheduled, setScheduled] = useState(false); // New state for tracking if form is scheduled
   const [scheduledWorkout, setScheduledWorkout] = useState(null);
   const [scheduledTime, setScheduledTime] = useState(null);
   const [scheduledDate, setScheduledDate] = useState(null);
-  const navigate = useNavigate();
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -39,17 +36,12 @@ const ScheduleForm = ({ handleSubmit }) => {
     setInvalidDate(false);
   };
 
-  const handleInputChange = () => {
-    setFormChanged(true);
-  };
-
   const resetForm = () => {
     setWorkout('');
     setDate('');
     setTime('');
     setSubmitted(false);
     setScheduled(false);
-    setFormChanged(false);
   };
 
   return (
@@ -60,25 +52,16 @@ const ScheduleForm = ({ handleSubmit }) => {
         type="text"
         id="workout_input"
         value={workout}
-        onChange={(e) => {
-          setWorkout(e.target.value);
-          handleInputChange();
-        }}
+        onChange={(e) => setWorkout(e.target.value)}
         required
       />
       <DateInput 
         date={date} 
-        setDate={(newDate) => {
-          setDate(newDate);
-          handleInputChange();
-        }}
+        setDate={setDate}
       />
       <TimeInput 
         time={time} 
-        setTime={(newTime) => {
-          setTime(newTime);
-          handleInputChange();
-        }}
+        setTime={setTime}
       />
       {invalidDate && <p style={{ color: 'red' }}>Invalid date! Please select a date on or after today.</p>}
       {submitted && scheduledDate && (
@@ -91,4 +74,3 @@ const ScheduleForm = ({ handleSubmit }) => {
 };
 
 export default ScheduleForm;
-
