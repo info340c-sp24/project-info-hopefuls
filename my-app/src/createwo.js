@@ -1,7 +1,11 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './index.css';
+<<<<<<< HEAD
+import workouts from "./workouts.json"; 
+=======
 import CwBuildingWorkout from './CwBuildingWorkout';
+>>>>>>> f394f78e818f09fb21365b6c5b2b57a2a0b4010e
 import CwHeader from './CwHeader';
 import Footer from './Footer';
 import workouts from "./workouts.json"; 
@@ -13,7 +17,14 @@ const Createwo = () => {
   const [repsSets, setRepsSets] = useState('');
   const [description, setDiscription] = useState('');
   const [myWO, setmyWO] = useState('');
+<<<<<<< HEAD
+
+  //filtered list for searching display
+  const [filteredWorkouts, setFilteredWorkouts] = useState([]);
+
+=======
   
+>>>>>>> f394f78e818f09fb21365b6c5b2b57a2a0b4010e
   // workout list user is creating
   const [newWorkout, setNewWorkout] = useState([]);
 
@@ -47,10 +58,9 @@ const Createwo = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     const results = workouts.filter(workout => 
-      (catagory === "" || workout.goal === catagory) && 
-      (workoutName === "" || workout.name === workoutName)
+      (catagory === "" || workout.goal === catagory)
     );
-    setNewWorkout(...newWorkout, results);
+     setFilteredWorkouts(results);
   };
 
   return (
@@ -106,7 +116,6 @@ const Createwo = () => {
           <form onSubmit={handleSearch}>
             <div className='card'>
                <h2>Search Workouts:</h2>
-                        
                         <label htmlFor="workout_cat_input">Catagory</label>
                         <select class="form-select"
                         id="worout_cat_input"
@@ -120,36 +129,50 @@ const Createwo = () => {
                             <option value="5">core_strength</option>
                             <option value="6">cardio</option>
                         </select>  
-                        
-                        <label htmlFor="saved_workout_select">My Workouts: </label>
-                        <select class="form-select" 
-                        id="saved_workout_select"
-                        value={workoutName}
-                        onChange={(e) => setWorkoutName(e.target.value)}
-                        >
-                            <option selected>Choose</option>
-                            <option value="1">Push-Ups</option>
-                            <option value="2">Leg-Press</option>
-                            <option value="3">Sumo Squats</option>
-                            <option value="4">Tredmill</option>
-                            <option value="5">Good Mornings</option>
-                            <option value="6">Arm Curls</option>
-                            <option value="7">New...</option>
-                        </select>
                   
-                        <h3>Results</h3>
+                        <label htmlFor="saved_workout_select">My Workouts: </label>
                         <select class="form-select"
                          id="saved_workout_select"
                          value={workoutName}
-                         onClick={() => handleAddButtonClick()}>
-                          {newWorkout.map((workout, index) => (
+                         onChange={(e) => setWorkoutName(e.target.value)}>
+                          {filteredWorkouts.map((workout, index ) => (
                             <option value={index}>{workout.name}</option>
                           ))}
                         </select>
+                        <label htmlFor="reps_sets">Reps/Sets:</label>
+                        <input type="reps/sets"
+                         id="reps_sets" 
+                         placeholder="10-4"
+                         value={repsSets}
+                        onChange={(e) => setRepsSets(e.target.value)}></input>
+                        <label htmlFor="description_field">Description(optional): </label>
+                        <textarea type="description" 
+                        class="form-control" 
+                        id="description_field"
+                        value={description}
+                        onChange={(e) => setDiscription(e.target.value)}></textarea>
+                        <button type="submit"
+                         className="button"
+                         onClick={() => handleAddButtonClick()}>Save</button>
             </div>
           </form>   
         </div>
-        <CwBuildingWorkout />
+
+        <div className='container'>
+            <div className='card'>
+               <h2>Current Workout:</h2>
+               <ul id="workout_list">
+                {newWorkout.map((workout, index) => (
+                  <li key={index}>
+                    <h3>{workout.name}</h3>
+                    <p>Reps/Sets: {workout.repSet}</p>
+                    <p>Description: {workout.des}</p>
+                  </li>
+                ))}
+              </ul>
+          </div>
+  
+        </div>
         <Footer />
       </div>
   )
