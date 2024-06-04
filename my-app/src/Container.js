@@ -2,6 +2,7 @@
 import React from 'react';
 import Card from './Card';
 import Schedule from './schedule';
+import Createwo from './createwo';
 
 function Container() {
   const cardsData = [
@@ -10,7 +11,7 @@ function Container() {
       imgAlt: "Create Workout",
       title: "Create Workout",
       description: "Create your own personalized workout.",
-      link: "Create_page.html"
+      link: "createwo"
     },
     {
       imgSrc: "/img/search.jpeg",
