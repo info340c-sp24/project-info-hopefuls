@@ -1,22 +1,22 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useUser } from './UserContext'; 
 
 function Header() {
     const navigate = useNavigate();
-
-    const navigateToSign = () => {
-        navigate('/signin');
-    }
+    const { user } = useUser(); 
 
     return (
       <header>
         <h1>Workout Planner</h1>
         <div className="sign-up">
-          {/* <a href="sign" className="button">Sign Up</a> */}
-            <button onClick= {navigateToSign}>Sign In</button>
+          {user ? (
+            <span>{user.email}</span> 
+          ) : (
+            <button onClick={() => navigate('/signin')}>Sign In</button>
+          )}
         </div>
       </header>
     );
-  }
-
-  export default Header;
+}
+export default Header;
