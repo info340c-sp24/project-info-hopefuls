@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ReactDOM from "react-dom";
-import Signin from './signin';
+import Signin from './Signin';
 import Landing from './Landing';
 import Createwo from './createwo';
 import SearchWorkouts from './search';
