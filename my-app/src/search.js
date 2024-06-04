@@ -37,7 +37,7 @@ function SearchWorkouts() {
         <nav className="navbar">
           <div className="container">
             <a href="/" onClick={navigateToHome}>Home</a>
-            <a href="/Create_page.html" onClick={navigateToCreate}>Create</a>
+            <a href="/createwo" onClick={navigateToCreate}>Create</a>
             <a href="/schedule" onClick={navigateToSchedule}>Schedule</a>
           </div>
         </nav>

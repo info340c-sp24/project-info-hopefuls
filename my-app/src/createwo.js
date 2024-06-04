@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './index.css';
 import workouts from "./workouts.json"; 
 import CwHeader from './CwHeader';
 import Footer from './Footer';
@@ -166,7 +165,7 @@ const Createwo = () => {
         </div>
         <Footer />
       </div>
-  )
+  );
 }
 
 export default Createwo;
