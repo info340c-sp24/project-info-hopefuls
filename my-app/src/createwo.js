@@ -169,4 +169,4 @@ const Createwo = () => {
   )
 }
 
-export default Createwo
+export default Createwo;
